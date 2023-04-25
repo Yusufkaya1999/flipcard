@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .kapsayici{
+        width: 240px;
+        height: 20px;
+        margin: 10px;
+        float: left;
+    }
+    .on{
+        position: absolute;
+        width: 240px;
+        height: 200px;
+        border: 7px;
+        transform: perspective(500px) rotate(0deg);
+        backface-visibility: hidden;
+        background: #D0E441;
+        transition: transform 1s linear;
+    }
+    .arka{
+        position: absolute;
+        width: 240px;
+        height: 200px;
+        border: 7px;
+        transform: perspective(500px) rotate(0deg);
+        background: #800080;
+        color: #ffffff;
+        backface-visibility: hidden;
+        transition: transform 1s linear;
+    }
+    .kapsayici:hover .on{
+        transform: perspective(500px) rotateY(-180deg);
+    }
+    .kapsayici:hover .arka{
+        transform: perspective(500px) rotateY(0deg);
+    }
+
+
+</style>
+<body>
+    <div class="kapsayici">
+        <div class="arka">arka taraf</div>
+        <div class="on">ön taraf</div>
+    </div>
+    <div class="kapsayici">
+        <div class="arka">arka taraf</div>
+        <div class="on">ön taraf</div>
+    </div>
+    <div class="kapsayici">
+        <div class="arka">arka taraf</div>
+        <div class="on">ön taraf</div>
+    </div>
+</body>
+</html>
